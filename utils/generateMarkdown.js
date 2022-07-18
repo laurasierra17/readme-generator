@@ -4,42 +4,50 @@ const licensesList = require('./licenses.js');
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  let badge;
   licensesList.forEach(licenses => {
     if (licenses.license === license) {
-      console.log("licenses.licenseBadge: ", licenses.licenseBadge)
-      return licenses.licenseBadge;
+      badge = licenses.licenseBadge;
     }
   })
+  return badge;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  let link;
   licensesList.forEach(licenses => {
     if (licenses.license === license) {
-      return licenses.licenseLink;
+      link = licenses.licenseLink;
     }
   })
+  return link;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  let section;
   licensesList.forEach(licenses => {
     if (licenses.license === license) {
-      return licenses.licenseSection;
+      section = licenses.licenseSection;
     }
   })
+  return section;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   // Destructure the user's answers
   const { title, description, installation, usage, license, contributing, tests, github, email } = data;
+  const badge = renderLicenseBadge(license);
+  const link = renderLicenseLink(license);
+  const section = renderLicenseSection(license);
 
   return `# ${title}
 
-[![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
+[![License: ${license}](${badge})](${link})
 
 ## Description
 ${description}
@@ -61,8 +69,10 @@ ${installation}
 ## Usage
 ${usage}
 
-## License
-${renderLicenseSection(license)}
+${license && 
+  `## License
+  ${section}`
+}
 
 ## Contributing
 ${contributing}
