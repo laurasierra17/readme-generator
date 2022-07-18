@@ -45,9 +45,13 @@ function generateMarkdown(data) {
   const link = renderLicenseLink(license);
   const section = renderLicenseSection(license);
 
+  console.log(license)
   return `# ${title}
 
-[![License: ${license}](${badge})](${link})
+${
+  (license !== 'None') && `[![License: ${license}](${badge})](${link})`
+}
+
 
 ## Description
 ${description}
@@ -69,7 +73,8 @@ ${installation}
 ## Usage
 ${usage}
 
-${license && 
+${
+  (license !== 'None') && 
   `## License
   ${section}`
 }
@@ -85,7 +90,7 @@ ${tests}
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at ${email}.
-You can find more of my work at [${github}](https://www.github.com/${github})
+You can find more of my work at [${github}](https://www.github.com/${github}).
 `;
 }
 
