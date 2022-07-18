@@ -63,17 +63,10 @@ const questions = [
         message: "Select a license for your project",
         choices: [
             "No License",
-            "MIT", 
-            "GNU GPLv3", 
-            "GNU AGPLv3", 
-            "GNU LGPLv3", 
-            "Mozilla Public License 2.0", 
-            "Apache License 2.0", 
-            "Boost Software License 1.0", 
-            "The Unlicense", 
-            "Eclipse Public License 2.0", 
-            "Creative Commons Zero v1.0 Universal", 
-            "BSD 2-Clause \"Simpllified\" License", "BSD 3-Clause \"New\" or \"Revised\" License"
+            "MIT",
+            "GPL 3.0",
+            "APACHE 2.0", 
+            "BSD 3"
         ]
     },
     {
