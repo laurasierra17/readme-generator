@@ -6,6 +6,7 @@ const licensesList = require('./licenses.js');
 function renderLicenseBadge(license) {
   licensesList.forEach(licenses => {
     if (licenses.license === license) {
+      console.log("licenses.licenseBadge: ", licenses.licenseBadge)
       return licenses.licenseBadge;
     }
   })
@@ -35,41 +36,46 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   // Destructure the user's answers
   const { title, description, installation, usage, license, contributing, tests, github, email } = data;
-  
+
   return `# ${title}
 
-  [![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
+[![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
 
-  ## Description
-  ${description}
+## Description
+${description}
 
-  # Table of Contents
+# Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
+## Installation
+To install necessary dependencies, run the following command:
+\`\`\`
+${installation}
+\`\`\`
 
-  ## Installation
-  To install necessary dependencies, run the following command:
-  \`\`\`
-  ${installation}
-  \`\`\`
+## Usage
+${usage}
 
-  ## Usage
-  ${usage}
+## License
+${renderLicenseSection(license)}
 
-  ## License
-  ${renderLicenseSection(license)}
+## Contributing
+${contributing}
 
-  ## Contributing
-  ${contributing}
+## Tests
+To run tests, run the following command:
+\`\`\`
+${tests}
+\`\`\`
 
-  ## Tests
-  To run tests, run the following command:
-  \`\`\`
-  ${tests}
-  \`\`\`
-
-  ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${email}.
-  You can find more of my work at [${github}](https://www.github.com/${github})
+## Questions
+If you have any questions about the repo, open an issue or contact me directly at ${email}.
+You can find more of my work at [${github}](https://www.github.com/${github})
 `;
 }
 
