@@ -62,11 +62,11 @@ const questions = [
         name: "license",
         message: "Select a license for your project",
         choices: [
-            "No License",
             "MIT",
             "GPL 3.0",
             "APACHE 2.0", 
-            "BSD 3"
+            "BSD 3",
+            "None"
         ]
     },
     {
