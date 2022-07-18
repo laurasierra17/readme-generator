@@ -7,17 +7,6 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: "input",
-        name: "name",
-        message: "What is your name?",
-        validate: (input) => {
-            if (!input) {
-                return "Please enter your name"
-            }
-            return true;
-        }
-    },
-    {
-        type: "input",
         name: "title",
         message: "What is the title of your project?",
         validate: (input) => {
@@ -39,7 +28,8 @@ const questions = [
     },
     {
         name: "installation",
-        message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running",
+        message: "What command should be run to install dependencies?",
+        default: "(npm i)",
         validate: (input) => {
             if (!input) {
                 return "Please enter a valid installation steps"
@@ -49,10 +39,10 @@ const questions = [
     },
     {
         name: "usage",
-        message: "Provide instructions and examples for use",
+        message: "What does the user need to know about using the repo?",
         validate: (input) => {
             if (!input) {
-                return "Please enter a insturctions and examples for use"
+                return "Please enter insturctions and examples for use"
             }
             return true;
         }
@@ -71,7 +61,7 @@ const questions = [
     },
     {
         name: "contributing",
-        message: "What guidelines should other developers follow if they wish to contribute?",
+        message: "What does the user need to know about contibuting to the repo?",
         validate: (input) => {
             if (!input) {
                 return "Please enter some guidelines for contributing"
@@ -81,10 +71,11 @@ const questions = [
     },
     {
         name: "tests",
-        message: "Include tests for your application and provide examples on how to run them",
+        message: "What command should be run to run tests?",
+        default: "(npm test)",
         validate: (input) => {
             if (!input) {
-                return "Please includes some tests and examples"
+                return "Please include the command to run tests"
             }
             return true;
         }
