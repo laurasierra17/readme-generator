@@ -7,6 +7,17 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: "input",
+        name: "name",
+        message: "What is your name?",
+        validate: (input) => {
+            if (!input) {
+                return "Please enter your name"
+            }
+            return true;
+        }
+    },
+    {
+        type: "input",
         name: "title",
         message: "What is the title of your project?",
         validate: (input) => {
