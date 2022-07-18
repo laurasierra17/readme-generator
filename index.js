@@ -51,6 +51,7 @@ const questions = [
         name: "license",
         message: "Select a license for your project",
         choices: [
+            "No License",
             "MIT", 
             "GNU GPLv3", 
             "GNU AGPLv3", 
@@ -102,18 +103,22 @@ const questions = [
             if(!emailRegex.test(input)) {
                 return "You have to provide a valid email address"
             }
-            return true
+            return true;
         }
     }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), err => {
+        if (err) console.log(err);
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(data => {
-        console.log(data);
+    inquirer.prompt(questions).then(answers => {
+        writeToFile("./test/README.md", answers);
     })
 }
 
