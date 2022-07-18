@@ -107,6 +107,7 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), err => {
         if (err) console.log(err);
+        console.log("Generating README...");
     })
 }
 
