@@ -1,6 +1,5 @@
 // Access information for each license
 const licensesList = require('./licenses.js');
-console.log(licenses);
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -39,6 +38,38 @@ function generateMarkdown(data) {
   
   return `# ${title}
 
+  [![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
+
+  ## Description
+  ${description}
+
+  # Table of Contents
+
+
+  ## Installation
+  To install necessary dependencies, run the following command:
+  \`\`\`
+  ${installation}
+  \`\`\`
+
+  ## Usage
+  ${usage}
+
+  ## License
+  ${renderLicenseSection(license)}
+
+  ## Contributing
+  ${contributing}
+
+  ## Tests
+  To run tests, run the following command:
+  \`\`\`
+  ${tests}
+  \`\`\`
+
+  ## Questions
+  If you have any questions about the repo, open an issue or contact me directly at ${email}.
+  You can find more of my work at [${github}](https://www.github.com/${github})
 `;
 }
 

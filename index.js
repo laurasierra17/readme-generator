@@ -29,7 +29,7 @@ const questions = [
     {
         name: "installation",
         message: "What command should be run to install dependencies?",
-        default: "(npm i)",
+        default: "npm i",
         validate: (input) => {
             if (!input) {
                 return "Please enter a valid installation steps"
@@ -72,7 +72,7 @@ const questions = [
     {
         name: "tests",
         message: "What command should be run to run tests?",
-        default: "(npm test)",
+        default: "npm test",
         validate: (input) => {
             if (!input) {
                 return "Please include the command to run tests"
