@@ -29,7 +29,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === "None") {
-    return;
+    return "";
   } else {
     let section = "## License \n";
     licensesList.forEach(licenses => {
@@ -51,14 +51,17 @@ function generateMarkdown(data) {
   const link = renderLicenseLink(license);
   const section = renderLicenseSection(license);
 
+  renderBadge = () => {
+    if (license === "None") {
+      return "";
+    } else {
+      return `[![License: ${license}](${badge})](${link})`
+    }
+  }
+
   return `# ${title}
 
-${
-  // if (license !== 'None') {
-  //   return [![License: ${license}](${badge})](${link})
-  // }
-  (license !== 'None') && `[![License: ${license}](${badge})](${link})`
-}
+${renderBadge()}
 
 ## Description
 ${description}
