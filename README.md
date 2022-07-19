@@ -43,3 +43,7 @@ npm test
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at laura.sierra17@gmail.com.
 You can find more of my work at [laurasierra17](https://www.github.com/laurasierra17).
+
+## User Information
+- [LinkedIn](https://www.linkedin.com/in/laurasierra2022)
+- [Portfolio](http://www.laura-sierra.com)
