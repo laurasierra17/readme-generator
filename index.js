@@ -1,11 +1,12 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
+        // Prompts user for title
         type: "input",
         name: "title",
         message: "What is the title of your project?",
@@ -17,6 +18,7 @@ const questions = [
         }
     },
     {
+        // Prompts user for description
         name: "description",
         message: "Describe what your project is about",
         validate: (input) => {
@@ -27,6 +29,7 @@ const questions = [
         }
     },
     {
+        // Prompts user for installation information
         name: "installation",
         message: "What command should be run to install dependencies?",
         default: "npm i",
@@ -38,6 +41,7 @@ const questions = [
         }
     },
     {
+        // Prompts user for usage information
         name: "usage",
         message: "What does the user need to know about using the repo?",
         validate: (input) => {
@@ -48,6 +52,7 @@ const questions = [
         }
     },
     {
+        // Prompts user to select a license for their project
         type: "list",
         name: "license",
         message: "Select a license for your project",
@@ -60,6 +65,7 @@ const questions = [
         ]
     },
     {
+        // Prompts user for information on contributions
         name: "contributing",
         message: "What does the user need to know about contibuting to the repo?",
         validate: (input) => {
@@ -70,6 +76,7 @@ const questions = [
         }
     },
     {
+        // Prompts user for how to run tests
         name: "tests",
         message: "What command should be run to run tests?",
         default: "npm test",
@@ -81,6 +88,7 @@ const questions = [
         }
     },
     {
+        // Prompts for user's github
         name: "github",
         message: "What is your GitHub username?",
         validate: (input) => {
@@ -91,8 +99,10 @@ const questions = [
         }
     },
     {
+        // Prompts for user email
         name: "email",
         message: "What is your email? This will help developers reach you!",
+        // Validate user's email
         validate: (input) => {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
             if(!emailRegex.test(input)) {
@@ -103,17 +113,19 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), err => {
         if (err) console.log(err);
+        // Message to log after user completes questionnaire and while file is developing
         console.log("Generating README...");
     })
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions).then(answers => {
+        // Pass user's answers and file path to generate README
         writeToFile("./test/README.md", answers);
     })
 }
