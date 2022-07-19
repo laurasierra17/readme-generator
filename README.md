@@ -17,7 +17,10 @@ The functionality:
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Technologies Used](#technologies-used)
+* [Code Snippets](#code-snippets)
 * [Questions](#questions)
+* [User Information](#user-information)
 
 ## Installation
 To install necessary dependencies, run the following command:
@@ -40,7 +43,7 @@ To run tests, run the following command:
 npm test
 ```
 
-## Technologie Used
+## Technologies Used
 - Node.js
 
 ## Code Snippets
