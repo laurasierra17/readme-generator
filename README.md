@@ -5,6 +5,12 @@
 ## Description
 This application helps developers to quickly generate a README boilerplate and populate it with basic information.
 
+Here's the link to how it works: [click here](https://youtu.be/h-LH59d7soE)
+
+## Screenshots
+The functionality:
+![How the README is created](./assets/images/screenshot.png)
+
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
