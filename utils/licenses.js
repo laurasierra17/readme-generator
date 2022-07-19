@@ -1,3 +1,6 @@
+// An array of licenses and its associated information
+// This is what is used to match the user's selection with the information
+// to be displayed on the README markdown
 const licenses = [
     {
         license: "None",
