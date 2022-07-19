@@ -59,6 +59,14 @@ function generateMarkdown(data) {
     }
   }
 
+  renderLicenseTOC = () => {
+    if (license === "None") {
+      return "";
+    } else {
+      return `* [License](#license)`
+    }
+  }
+
   return `# ${title}
 
 ${renderBadge()}
@@ -69,7 +77,7 @@ ${description}
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+${renderLicenseTOC()}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)

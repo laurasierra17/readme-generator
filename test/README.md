@@ -1,14 +1,14 @@
-# sdfsd
+# sadf
 
 
 
 ## Description
-asdfads
+asdfa
 
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -16,16 +16,16 @@ asdfads
 ## Installation
 To install necessary dependencies, run the following command:
 ```
-npm i
+a
 ```
 
 ## Usage
-asfd
+asdf
 
 
 
 ## Contributing
-asdfds
+asdf
 
 ## Tests
 To run tests, run the following command:
@@ -34,5 +34,5 @@ npm test
 ```
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at sdf@lksd.com.
-You can find more of my work at [asfds](https://www.github.com/asfds).
+If you have any questions about the repo, open an issue or contact me directly at asdf@lsfd.com.
+You can find more of my work at [asdf](https://www.github.com/asdf).
