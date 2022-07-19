@@ -1,8 +1,7 @@
 // Access information for each license
 const licensesList = require('./licenses.js');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   let badge;
   licensesList.forEach(licenses => {
@@ -13,8 +12,7 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link
 function renderLicenseLink(license) {
   let link;
   licensesList.forEach(licenses => {
@@ -25,9 +23,9 @@ function renderLicenseLink(license) {
   return link;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README
 function renderLicenseSection(license) {
+  // Return an empty string if the license is "None"
   if (license === "None") {
     return "";
   } else {
@@ -47,10 +45,14 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   // Destructure the user's answers
   const { title, description, installation, usage, license, contributing, tests, github, email } = data;
+  // Returns the badge associated with the selected license
   const badge = renderLicenseBadge(license);
+  // Returns the link associated with the selected license
   const link = renderLicenseLink(license);
+  // Returns the Licensing section associated with the selected license
   const section = renderLicenseSection(license);
 
+  // Render the license badge
   renderBadge = () => {
     if (license === "None") {
       return "";
@@ -59,6 +61,7 @@ function generateMarkdown(data) {
     }
   }
 
+  // Render the License link in the table of content
   renderLicenseTOC = () => {
     if (license === "None") {
       return "";
@@ -67,6 +70,7 @@ function generateMarkdown(data) {
     }
   }
 
+  // README markdown
   return `# ${title}
 
 ${renderBadge()}
