@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-This application helps developers to quickly generate a README boilerplate and populate it with basic information.
+This application helps developers to quickly generate a README boilerplate and populate it with basic information. After installing the dependencies and running the program, the application asks the user for the project's title and a short description, command to install dependencies and run tests, to select a license, and their GitHub username as well as their email.
 
-Here's the link to how it works: [click here](https://youtu.be/h-LH59d7soE)
+Here's the link to how it works: [click here](https://youtu.be/h-LH59d7soE).
 
 ## Screenshots
 The functionality:
