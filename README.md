@@ -43,6 +43,30 @@ npm test
 ## Technologie Used
 - Node.js
 
+## Code Snippets
+```javascript
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), err => {
+        if (err) console.log(err);
+        // Message to log after user completes questionnaire and while file is developing
+        console.log("Generating README...");
+    })
+}
+
+// Function to initialize app
+function init() {
+    inquirer.prompt(questions).then(answers => {
+        // Pass user's answers and file path to generate README
+        writeToFile("./test/README.md", answers);
+    })
+}
+
+// Function call to initialize app
+init();
+```
+The `init()` function resolves the inquirer prompt (which returns a promise) with the users inputs. With this data, we can pass it into the `writeToFile()` function, along with the path and file name of what we are generating. In `writeToFile()`, we are using the file system's built-in method to generate the file. The `generateMarkdown()` function parses through the user's inputs to create a README boilerplate with their data.
+
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at laura.sierra17@gmail.com.
 You can find more of my work at [laurasierra17](https://www.github.com/laurasierra17).
