@@ -1,10 +1,9 @@
-# dfsdf
+# fdssdf
 
-false
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-sdfdsf
+sdfsd
 
 # Table of Contents
 * [Installation](#installation)
@@ -21,12 +20,13 @@ npm i
 ```
 
 ## Usage
-sdfsdf
+sdfsd
 
-false
+## License 
+This project is licensed under the MIT license.
 
 ## Contributing
-dfasd
+sdfsd
 
 ## Tests
 To run tests, run the following command:
@@ -35,5 +35,5 @@ npm test
 ```
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at sdf@lsd.com.
-You can find more of my work at [asfdsd](https://www.github.com/asfdsd).
+If you have any questions about the repo, open an issue or contact me directly at sdf@lsfkd.com.
+You can find more of my work at [dsfsd](https://www.github.com/dsfsd).
