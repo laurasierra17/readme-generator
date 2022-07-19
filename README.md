@@ -40,6 +40,9 @@ To run tests, run the following command:
 npm test
 ```
 
+## Technologie Used
+- Node.js
+
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at laura.sierra17@gmail.com.
 You can find more of my work at [laurasierra17](https://www.github.com/laurasierra17).
